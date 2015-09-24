@@ -1,0 +1,123 @@
+.intro-pic  {
+  height: 250px;
+  width: 250px;
+  border: 10px solid #ffffff;
+  position: absolute;
+  top: 625px;
+  right: 25px;
+  transition: border-color 0.5s ease;
+}
+.intro-pic:hover {
+  border-color: black;
+}
+
+ .icons-break {
+padding-bottom: 3em;
+ } 
+
+.icons>div {
+  padding-top: 3em;
+  line-height: 4em;
+}
+.icons>div:last-child{
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    padding: 0;
+  }
+  .intro-pic {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    top: 0;
+    right: 0;
+  }
+  .php {
+    margin-top: 1.5em;
+  }
+  .bootstrap {
+    padding-bottom: 3em;
+  }
+  .icons>div {
+    line-height: 0em;
+  }
+  .icons div:nth-child(-n+4){
+    padding-top: 2em;
+  }
+  .icons div:last-child {
+    padding-top: 0px;
+    margin-bottom: 2em;
+  }
+}
+
+
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 230px;
+  height: 230px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+.flipper b {
+ height: 230px;
+width: 230px;
+display: block;
+position: relative;
+border-radius: 250px; 
+}
+
+.front-img {
+-webkit-transform: rotate(30deg);
+-moz-transform: rotate(30deg);
+-ms-transform: rotate(30deg);
+-o-transform: rotate(30deg);
+transform: rotate(11deg);
+display: inline-block;
+background-size: 121%;
+background-position: 2px -8px;
+background-image: url("../img/headshot2.jpeg");
+}
+
+.back-img {
+background-size: 101%;
+background-position: -2px -43px;
+background-image: url("../img/headshot.jpg");
+}
